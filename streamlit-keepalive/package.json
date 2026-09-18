@@ -1,0 +1,12 @@
+{
+  "name": "streamlit-keepalive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Periodically visits and wakes Dagem Dereje's deployed Streamlit apps so portfolio visitors rarely hit a cold start.",
+  "scripts": {
+    "keepalive": "node scripts/keepalive.js"
+  },
+  "dependencies": {
+    "playwright": "1.47.2"
+  }
+}

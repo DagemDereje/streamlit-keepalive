@@ -1,0 +1,29 @@
+name: Keep Streamlit apps awake
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Every 6 hours — well under Streamlit Community Cloud's shortest
+    # reported inactivity threshold (~12 hours), so apps should rarely
+    # actually reach sleep during normal portfolio traffic.
+    - cron: "0 */6 * * *"
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run keep-alive check
+        run: npm run keepalive

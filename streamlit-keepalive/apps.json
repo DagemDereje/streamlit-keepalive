@@ -1,0 +1,7 @@
+[
+  { "name": "Drought Forecasting", "url": "https://drought-forcasting.streamlit.app" },
+  { "name": "Fraud Monitoring", "url": "https://fraud-monitoring.streamlit.app" },
+  { "name": "Customer Intelligence Platform", "url": "https://customer-intelligenceplatform.streamlit.app" },
+  { "name": "Heart Disease Predictor", "url": "https://heart-disease-predictiond.streamlit.app" },
+  { "name": "ReceiptIQ", "url": "https://recieptiq.streamlit.app" }
+]
